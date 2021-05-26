@@ -63,7 +63,7 @@ $(document).ready(function() {
    }
 
    function getAllTasks() {
-      const requestUrl = apiRoot + 'getTasks';
+      const requestUrl = apiRoot + 'tasks';
 
       $.ajax({
          url: requestUrl,
@@ -186,7 +186,7 @@ $(document).ready(function() {
          data: JSON.stringify({
          name: relatedTask.title,
             description: relatedTask.content,
-            listId: selectedListId
+            idList: selectedListId
          }),
          success: function(data) {
             console.log('Card created - ' + data.shortUrl);
